@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* Modernized color palette and style improvements */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #f5f6fa;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: #00d2ff;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #ff6a00;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  appearance: none;
+  border: none;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+button:hover {
+  background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+#wrapper-div {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  background: rgba(34, 40, 49, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 32px 24px;
+}
+.blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 50px #00d2ff;
+  z-index: -100;
+}
+/* Nav Section */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+/*Logo section*/
+
+#nav-logo {
+  width: 120px;
+  margin: 0 40px 0 0;
+}
+#logo-img {
+  width: 100px;
+  border-radius: 100px;
+  margin-left: 0;
+}
+
+/*Links Section*/
+
+#nav-linklist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+}
+.nav-link {
+  padding: 0;
+  font-size: 20px;
+}
+.nav-link a {
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-link a:hover {
+  background: #00d2ff22;
+  color: #00d2ff;
+}
+
+/* Hire me link */
+.hire-me {
+  padding: 10px 24px;
+  font-size: 18px;
+  border: 2px solid #00d2ff;
+  border-radius: 20px;
+  color: #00d2ff;
+  background: transparent;
+  margin-left: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+.hire-me:hover {
+  background: #00d2ff;
+  color: #fff;
+}
+/*Container section*/
+#container-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 320px;
+  margin: 40px 0 0 0;
+}
+#head-content-div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#container-header-div {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+#container-content-div {
+  font-size: 1.15rem;
+  color: #d1d5db;
+}
+#image-div {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 32px #00d2ff33;
+}
+
+/*Features Section */
+
+#features-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 60px 0 60px 0;
+  align-items: center;
+}
+#features-head-div {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 32px;
+}
+.features-content-div {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  justify-content: center;
+  width: 100%;
+}
+.feature-head-feature-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.feature {
+  font-size: 3rem;
+  color: #00d2ff;
+}
+.feature-head {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Project Section */
+
+#Projects-div {
+  width: 100%;
+  margin-bottom: 50px;
+}
+#project-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 40px;
+}
+#projects-wrapper-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+.project-block-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 480px;
+  min-height: 100px;
+  background: #232526;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #00d2ff22;
+  margin-bottom: 12px;
+  padding: 16px 24px;
+  gap: 24px;
+}
+.first-side-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  color: #fff;
+  gap: 8px;
+}
+.second-side-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 320px;
+  color: #fff;
+  gap: 8px;
+}
+.side-head {
+  font-size: 1rem;
+  color: #d1d5db;
+}
+.side-done {
+  color: #22c55e;
+  font-weight: 600;
+}
+.side-wait {
+  color: #ef4444;
+  font-weight: 600;
+}
+.circular-number-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #00d2ff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #00d2ff;
+  background: #232526;
+  margin-bottom: 4px;
+}
+
+/*Appear*/
+.project-animation .first-side-block,
+.project-animation .second-side-block {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.project-animation.animate .first-side-block,
+.project-animation.animate .second-side-block {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Contact Section */
+#contact-div {
+  width: 100%;
+  max-width: 700px;
+  margin: 60px auto 0 auto;
+  background: #232526;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #00d2ff22;
+  padding: 32px 24px;
+}
+#contact-head {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 24px;
+}
+#contact-content-cover-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact-content-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+#contact-content-getIntouch-div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#contact-content-getIntouch-div form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#contact-content-getIntouch-div input,
+#contact-content-getIntouch-div textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #00d2ff44;
+  background: #232526;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0;
+  outline: none;
+  transition: border 0.2s;
+}
+#contact-content-getIntouch-div input:focus,
+#contact-content-getIntouch-div textarea:focus {
+  border: 1.5px solid #00d2ff;
+}
+#contact-content-getIntouch-div textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.contact-form-button {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.contact-form-button:hover {
+  background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+  color: #fff;
+}
+#contact-content-mailicon-div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-content-mailicon-img {
+  width: 220px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #00d2ff22;
+}
+
+/* Add this CSS at the end of your existing styles */
+
+/* Mobile Styles */
+@media only screen and (max-width: 900px) {
+  #wrapper-div {
+    padding: 16px 4px;
+  }
+  #container-div {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  #head-content-div, #image-div {
+    width: 100%;
+  }
+  #projects-wrapper-div, .project-block-div {
+    width: 100%;
+    min-width: unset;
+  }
+  #contact-div {
+    max-width: 100%;
+    padding: 16px 4px;
+  }
+  #contact-content-div {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contact-content-mailicon-img {
+    width: 100%;
+    height: 120px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+  }
+  #nav-linklist {
+    flex-direction: column;
+    gap: 12px;
+  }
+  #container-header-div {
+    font-size: 1.5rem;
+  }
+  #container-image {
+    width: 120px;
+    height: 120px;
+  }
+  .features-content-div {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .project-block-div {
+    flex-direction: column;
+    width: 100%;
+    padding: 12px 8px;
+    gap: 12px;
+  }
+  #contact-div {
+    padding: 8px 2px;
+  }
+}
