@@ -13,8 +13,8 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   display: flex;
-  background: linear-gradient(135deg, #232526 0%, #414345 100%);
-  color: #f5f6fa;
+  background: #F4F4F2;
+  color: #495464;
   min-height: 100vh;
 }
 a {
@@ -49,9 +49,9 @@ button:hover {
   width: 100%;
   max-width: 1200px;
   margin: 40px auto 0 auto;
-  background: rgba(34, 40, 49, 0.92);
+  background: #E8E8E8;
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 32px rgba(73,84,100,0.08);
   padding: 32px 24px;
 }
 .blur {
@@ -69,6 +69,9 @@ nav {
   height: 100px;
   width: 100%;
   margin-bottom: 32px;
+  background: #E8E8E8;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(73,84,100,0.06);
 }
 
 /*Logo section*/
@@ -96,30 +99,31 @@ nav {
   font-size: 20px;
 }
 .nav-link a {
-  color: white;
+  color: #495464;
   padding: 8px 12px;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
+  background: transparent;
 }
 .nav-link a:hover {
-  background: #00d2ff22;
-  color: #00d2ff;
+  background: #BBBFCA44;
+  color: #BBBFCA;
 }
 
 /* Hire me link */
 .hire-me {
   padding: 10px 24px;
   font-size: 18px;
-  border: 2px solid #00d2ff;
+  border: 2px solid #BBBFCA;
   border-radius: 20px;
-  color: #00d2ff;
+  color: #495464;
   background: transparent;
   margin-left: 16px;
   transition: background 0.3s, color 0.3s;
 }
 .hire-me:hover {
-  background: #00d2ff;
-  color: #fff;
+  background: #BBBFCA;
+  color: #495464;
 }
 /*Container section*/
 #container-div {
@@ -139,13 +143,13 @@ nav {
 }
 #container-header-div {
   font-size: 2.5rem;
-  color: #fff;
+  color: #495464;
   font-weight: 700;
   margin-bottom: 16px;
 }
 #container-content-div {
   font-size: 1.15rem;
-  color: #d1d5db;
+  color: #495464;
 }
 #image-div {
   width: 35%;
@@ -172,7 +176,7 @@ nav {
 }
 #features-head-div {
   font-size: 2.2rem;
-  color: #fff;
+  color: #495464;
   margin-bottom: 32px;
 }
 .features-content-div {
@@ -193,7 +197,7 @@ nav {
   color: #00d2ff;
 }
 .feature-head {
-  color: #fff;
+  color: #BBBFCA;
   font-size: 1.1rem;
   font-weight: 500;
 }
