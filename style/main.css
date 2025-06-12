@@ -13,8 +13,8 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   display: flex;
-  background: linear-gradient(135deg, #232526 0%, #414345 100%);
-  color: #f5f6fa;
+  background: #0A2647;
+  color: #FFF;
   min-height: 100vh;
 }
 a {
@@ -49,9 +49,9 @@ button:hover {
   width: 100%;
   max-width: 1200px;
   margin: 40px auto 0 auto;
-  background: rgba(34, 40, 49, 0.92);
+  background: #144272;
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 32px rgba(10,38,71,0.12);
   padding: 32px 24px;
 }
 .blur {
@@ -69,6 +69,9 @@ nav {
   height: 100px;
   width: 100%;
   margin-bottom: 32px;
+  background: #144272;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(10,38,71,0.10);
 }
 
 /*Logo section*/
@@ -96,30 +99,31 @@ nav {
   font-size: 20px;
 }
 .nav-link a {
-  color: white;
+  color: #2C74B3;
   padding: 8px 12px;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
+  background: transparent;
 }
 .nav-link a:hover {
-  background: #00d2ff22;
-  color: #00d2ff;
+  background: #20529544;
+  color: #205295;
 }
 
 /* Hire me link */
 .hire-me {
   padding: 10px 24px;
   font-size: 18px;
-  border: 2px solid #00d2ff;
+  border: 2px solid #2C74B3;
   border-radius: 20px;
-  color: #00d2ff;
+  color: #2C74B3;
   background: transparent;
   margin-left: 16px;
   transition: background 0.3s, color 0.3s;
 }
 .hire-me:hover {
-  background: #00d2ff;
-  color: #fff;
+  background: #2C74B3;
+  color: #FFF;
 }
 /*Container section*/
 #container-div {
@@ -139,7 +143,7 @@ nav {
 }
 #container-header-div {
   font-size: 2.5rem;
-  color: #fff;
+  color: #2C74B3;
   font-weight: 700;
   margin-bottom: 16px;
 }
@@ -172,7 +176,7 @@ nav {
 }
 #features-head-div {
   font-size: 2.2rem;
-  color: #fff;
+  color: #2C74B3;
   margin-bottom: 32px;
 }
 .features-content-div {
@@ -193,7 +197,7 @@ nav {
   color: #00d2ff;
 }
 .feature-head {
-  color: #fff;
+  color: #205295;
   font-size: 1.1rem;
   font-weight: 500;
 }
