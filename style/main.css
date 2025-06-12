@@ -226,6 +226,7 @@ nav:active {
   gap: 48px;
   justify-content: center;
   width: 100%;
+  margin-top: 24px;
 }
 .feature-head-feature-wrap {
   display: flex;
@@ -467,62 +468,151 @@ nav:active {
 /* Mobile Styles */
 @media only screen and (max-width: 900px) {
   #wrapper-div {
-    padding: 16px 4px;
+    padding: 8px 0;
+    max-width: 100vw;
+  }
+  nav {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+    padding: 8px 0;
+  }
+  #nav-linklist {
+    display: none !important;
+    flex-direction: column;
+    background: #012B41ee;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    padding: 24px 0 12px 0;
+    box-shadow: 0 8px 32px #0C0821cc;
+    border-radius: 0 0 18px 18px;
+    z-index: 150;
+    align-items: center;
+    gap: 18px;
+  }
+  .menu-toggle:checked ~ .nav-linklist {
+    display: flex !important;
   }
   #container-div {
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
+    width: 100%;
+    min-height: unset;
   }
   #head-content-div, #image-div {
     width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  #container-header-div {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  #container-content-div {
+    font-size: 1rem;
+  }
+  #image-div {
+    margin-top: 12px;
+  }
+  #container-image {
+    width: 100px;
+    height: 100px;
+  }
+  .about-container {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 32px !important;
+  }
+  .about-image img {
+    max-width: 180px !important;
+    margin: 16px 0 !important;
+  }
+  .about-text {
+    align-items: center;
+    text-align: center;
+    max-width: 100vw;
+  }
+  #features-div {
+    margin: 32px 0;
+  }
+  #features-head-div {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+  .features-content-div {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .feature-head-feature-wrap {
+    min-width: 120px;
+    max-width: 90vw;
+  }
+  #experience-div {
+    margin-bottom: 32px !important;
+  }
+  #experience-div > div {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  #experience-div h2 {
+    font-size: 1.1rem !important;
+  }
+  #experience-div h3 {
+    font-size: 1rem !important;
+  }
+  #experience-div p {
+    font-size: 0.95rem !important;
+    max-width: 100vw !important;
   }
   #projects-wrapper-div, .project-block-div {
     width: 100%;
     min-width: unset;
   }
-  #contact-div {
-    max-width: 100%;
-    padding: 16px 4px;
-  }
-  #contact-content-div {
-    flex-direction: column;
-    gap: 16px;
-  }
-  .contact-content-mailicon-img {
-    width: 100%;
-    height: 120px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    height: auto;
-    gap: 12px;
-  }
-  #nav-linklist {
-    flex-direction: column;
-    gap: 12px;
-  }
-  #container-header-div {
-    font-size: 1.5rem;
-  }
-  #container-image {
-    width: 120px;
-    height: 120px;
-  }
-  .features-content-div {
-    flex-direction: column;
-    gap: 24px;
-  }
   .project-block-div {
     flex-direction: column;
     width: 100%;
-    padding: 12px 8px;
-    gap: 12px;
+    padding: 10px 4px;
+    gap: 8px;
   }
   #contact-div {
+    max-width: 100vw;
     padding: 8px 2px;
+    margin: 24px auto 0 auto;
+  }
+  #contact-head {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  #contact-content-div {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .contact-content-mailicon-img {
+    width: 100%;
+    height: 80px;
+  }
+  ul {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #container-header-div {
+    font-size: 1rem;
+  }
+  #container-image {
+    width: 70px;
+    height: 70px;
+  }
+  .about-image img {
+    max-width: 100px !important;
+  }
+  .feature-head-feature-wrap {
+    min-width: 80px;
   }
 }
 
@@ -590,4 +680,135 @@ body::before {
 #wrapper-div, nav, section, #container-div {
   position: relative;
   z-index: 1;
+}
+
+/* Hamburger Menü */
+.menu-icon, .menu-toggle { display: none !important; }
+@media (max-width: 900px) {
+  #nav-linklist {
+    display: flex !important;
+    flex-direction: column;
+    background: none;
+    position: static;
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    z-index: 1;
+    align-items: center;
+    gap: 18px;
+  }
+  nav {
+    min-height: 60px;
+    padding-bottom: 0;
+    position: relative;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* About Me görseli metnin altında */
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  padding: 0 16px;
+}
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.about-text {
+  flex: 2;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.about-image img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0 auto;
+}
+
+/* Genel padding ve spacing */
+.section-block {
+  padding: 0 16px;
+  margin-bottom: 32px;
+}
+#container-div {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+#container-content-div p, .about-text p, #experience-div p, #features-div, #contact-div, #projects-wrapper-div {
+  margin-bottom: 18px;
+}
+
+/* Kenarlara yapışık yazı kalmasın */
+body, html {
+  box-sizing: border-box;
+}
+
+/* Experience bölümü padding */
+#experience-div {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+#experience-div p, #experience-div h2, #experience-div h3 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+@media (max-width: 600px) {
+  #nav-linklist {
+    display: none !important;
+  }
+  .about-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .about-image, .about-text {
+    flex: unset;
+    max-width: 100%;
+  }
+  #nav-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  #logo-img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.about-text h2 {
+  text-align: left;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+}
+.about-text {
+  text-align: left;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media (max-width: 600px) {
+  .about-text h2 {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about-text {
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
