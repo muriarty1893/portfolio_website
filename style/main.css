@@ -13,9 +13,16 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   display: flex;
-  background: #0C0821;
+  background: linear-gradient(270deg, #0C0821, #328DA2, #01344C, #E3EAF3);
+  background-size: 600% 600%;
+  animation: gradientMove 16s ease-in-out infinite;
   color: #E3EAF3;
   min-height: 100vh;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 a {
   text-decoration: none;
@@ -70,10 +77,17 @@ nav {
   height: 100px;
   width: 100%;
   margin-bottom: 32px;
-  background: #012B41;
+  background: #012B41cc;
   border-radius: 14px;
   box-shadow: 0 2px 12px rgba(12,8,33,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: box-shadow 0.3s;
   color: #E3EAF3;
+}
+nav:active {
+  box-shadow: 0 2px 12px #328DA244;
 }
 
 /*Logo section*/
@@ -122,10 +136,16 @@ nav {
   background: transparent;
   margin-left: 16px;
   transition: background 0.3s, color 0.3s;
+  animation: pulse 2.5s infinite;
 }
 .hire-me:hover {
   background: #328DA2;
   color: #FFFFFF;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #328DA2; }
+  70% { box-shadow: 0 0 0 12px rgba(50,141,162,0); }
+  100% { box-shadow: 0 0 0 0 rgba(50,141,162,0); }
 }
 /*Container section*/
 #container-div {
@@ -148,6 +168,20 @@ nav {
   color: #FFFFFF;
   font-weight: 700;
   margin-bottom: 16px;
+  background: linear-gradient(90deg, #328DA2, #E3EAF3, #328DA2);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 4s ease-in-out infinite, glow 2.5s infinite alternate;
+}
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes glow {
+  0% { text-shadow: 0 0 8px #328DA2; }
+  100% { text-shadow: 0 0 24px #E3EAF3; }
 }
 #container-content-div {
   font-size: 1.15rem;
@@ -180,6 +214,11 @@ nav {
   font-size: 2.2rem;
   color: #FFFFFF;
   margin-bottom: 32px;
+  background: linear-gradient(90deg, #328DA2, #E3EAF3, #328DA2);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 4s ease-in-out infinite, glow 2.5s infinite alternate;
 }
 .features-content-div {
   display: flex;
@@ -193,6 +232,13 @@ nav {
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: wiggle 4s ease-in-out infinite;
+}
+.feature-head-feature-wrap:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 32px #328DA288;
+  z-index: 2;
 }
 .feature {
   font-size: 3rem;
@@ -219,6 +265,20 @@ nav {
   font-size: 2.2rem;
   color: #fff;
   margin-bottom: 40px;
+  background: linear-gradient(90deg, #328DA2, #E3EAF3, #328DA2);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 4s ease-in-out infinite, glow 2.5s infinite alternate;
+}
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes glow {
+  0% { text-shadow: 0 0 8px #328DA2; }
+  100% { text-shadow: 0 0 24px #E3EAF3; }
 }
 #projects-wrapper-div {
   display: flex;
@@ -312,6 +372,20 @@ nav {
   font-size: 2rem;
   color: #FFFFFF;
   margin-bottom: 24px;
+  background: linear-gradient(90deg, #328DA2, #E3EAF3, #328DA2);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 4s ease-in-out infinite, glow 2.5s infinite alternate;
+}
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes glow {
+  0% { text-shadow: 0 0 8px #328DA2; }
+  100% { text-shadow: 0 0 24px #E3EAF3; }
 }
 #contact-content-cover-div {
   display: flex;
@@ -450,4 +524,70 @@ nav {
   #contact-div {
     padding: 8px 2px;
   }
+}
+
+/* 2. Kartlara hafif sallanma animasyonu */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+.feature-head-feature-wrap {
+  animation: wiggle 4s ease-in-out infinite;
+}
+
+/* 3. Section'lara fade-in animasyonu (ilk yüklemede) */
+section, #container-div {
+  opacity: 0;
+  animation: fadeInSection 1.2s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+@keyframes fadeInSection {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. Butonlara renk geçişli hover animasyonu */
+.hire-me, .contact-form-button {
+  background: linear-gradient(90deg, #328DA2 0%, #E3EAF3 100%);
+  color: #0C0821;
+  transition: background 0.4s, color 0.4s;
+}
+.hire-me:hover, .contact-form-button:hover {
+  background: linear-gradient(90deg, #E3EAF3 0%, #328DA2 100%);
+  color: #01344C;
+}
+
+/* 5. İkonlara yukarı-aşağı hareket animasyonu */
+.feature img {
+  animation: floatIcon 2.5s ease-in-out infinite;
+}
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* 6. Arka plana dönen büyük bir daire (pseudo-element ile) */
+body::before {
+  content: '';
+  position: fixed;
+  left: 50vw;
+  top: 60vh;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #328DA255 0%, #0C0821 80%);
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: spinBg 24s linear infinite;
+  pointer-events: none;
+}
+@keyframes spinBg {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Section ve nav üstünde kalsın diye z-index ayarı */
+#wrapper-div, nav, section, #container-div {
+  position: relative;
+  z-index: 1;
 }
