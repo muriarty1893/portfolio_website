@@ -13,8 +13,8 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   display: flex;
-  background: linear-gradient(135deg, #232526 0%, #414345 100%);
-  color: #f5f6fa;
+  background: #0C0821;
+  color: #E3EAF3;
   min-height: 100vh;
 }
 a {
@@ -49,10 +49,11 @@ button:hover {
   width: 100%;
   max-width: 1200px;
   margin: 40px auto 0 auto;
-  background: rgba(34, 40, 49, 0.92);
+  background: #012B41;
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 32px rgba(12,8,33,0.10);
   padding: 32px 24px;
+  color: #E3EAF3;
 }
 .blur {
   position: absolute;
@@ -69,6 +70,10 @@ nav {
   height: 100px;
   width: 100%;
   margin-bottom: 32px;
+  background: #012B41;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(12,8,33,0.08);
+  color: #E3EAF3;
 }
 
 /*Logo section*/
@@ -96,30 +101,31 @@ nav {
   font-size: 20px;
 }
 .nav-link a {
-  color: white;
+  color: #E3EAF3;
   padding: 8px 12px;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
+  background: transparent;
 }
 .nav-link a:hover {
-  background: #00d2ff22;
-  color: #00d2ff;
+  background: #328DA244;
+  color: #FFFFFF;
 }
 
 /* Hire me link */
 .hire-me {
   padding: 10px 24px;
   font-size: 18px;
-  border: 2px solid #00d2ff;
+  border: 2px solid #328DA2;
   border-radius: 20px;
-  color: #00d2ff;
+  color: #E3EAF3;
   background: transparent;
   margin-left: 16px;
   transition: background 0.3s, color 0.3s;
 }
 .hire-me:hover {
-  background: #00d2ff;
-  color: #fff;
+  background: #328DA2;
+  color: #FFFFFF;
 }
 /*Container section*/
 #container-div {
@@ -139,13 +145,13 @@ nav {
 }
 #container-header-div {
   font-size: 2.5rem;
-  color: #fff;
+  color: #FFFFFF;
   font-weight: 700;
   margin-bottom: 16px;
 }
 #container-content-div {
   font-size: 1.15rem;
-  color: #d1d5db;
+  color: #E3EAF3;
 }
 #image-div {
   width: 35%;
@@ -172,7 +178,7 @@ nav {
 }
 #features-head-div {
   font-size: 2.2rem;
-  color: #fff;
+  color: #FFFFFF;
   margin-bottom: 32px;
 }
 .features-content-div {
@@ -193,7 +199,7 @@ nav {
   color: #00d2ff;
 }
 .feature-head {
-  color: #fff;
+  color: #E3EAF3;
   font-size: 1.1rem;
   font-weight: 500;
 }
@@ -295,15 +301,16 @@ nav {
   width: 100%;
   max-width: 700px;
   margin: 60px auto 0 auto;
-  background: #232526;
+  background: #01344C;
   border-radius: 18px;
-  box-shadow: 0 4px 32px #00d2ff22;
+  box-shadow: 0 4px 32px #328DA244;
   padding: 32px 24px;
+  color: #E3EAF3;
 }
 #contact-head {
   text-align: center;
   font-size: 2rem;
-  color: #fff;
+  color: #FFFFFF;
   margin-bottom: 24px;
 }
 #contact-content-cover-div {
@@ -335,9 +342,9 @@ nav {
   width: 100%;
   padding: 10px 14px;
   border-radius: 8px;
-  border: 1px solid #00d2ff44;
-  background: #232526;
-  color: #fff;
+  border: 1px solid #328DA244;
+  background: #0C0821;
+  color: #E3EAF3;
   font-size: 1rem;
   margin-bottom: 0;
   outline: none;
@@ -345,7 +352,7 @@ nav {
 }
 #contact-content-getIntouch-div input:focus,
 #contact-content-getIntouch-div textarea:focus {
-  border: 1.5px solid #00d2ff;
+  border: 1.5px solid #328DA2;
 }
 #contact-content-getIntouch-div textarea {
   min-height: 100px;
@@ -357,15 +364,15 @@ nav {
   font-size: 1.1rem;
   border-radius: 8px;
   border: none;
-  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
-  color: #fff;
+  background: #328DA2;
+  color: #E3EAF3;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
 .contact-form-button:hover {
-  background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
-  color: #fff;
+  background: #01344C;
+  color: #FFFFFF;
 }
 #contact-content-mailicon-div {
   flex: 1;
